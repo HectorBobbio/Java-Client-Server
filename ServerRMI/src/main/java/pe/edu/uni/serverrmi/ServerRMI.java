@@ -31,8 +31,9 @@ public class ServerRMI extends UnicastRemoteObject implements Interface{
         tag = "operation";
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RemoteException {
         System.out.println("ServerRMI!");
+        new ServerRMI().initServer();
     }
     
     private void initServer(){
